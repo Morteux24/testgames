@@ -1,24 +1,4 @@
-/* === Genel Stiller === */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #d3d3d3; /* Açık Gri */
-    color: #333;
-    text-align: center;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* === Koyu Tema === */
-.dark-theme {
-    background-color: #2a2a2a; /* Koyu Gri */
-    color: #e0e0e0;
-}
-
-/* === Menü === */
-.menu {
-    margin-top: 50px;
-}
-
-/* === Buton Stilleri === */
+/* === Buton Stili === */
 .game-btn {
     position: relative;
     padding: 15px 35px;
@@ -26,16 +6,15 @@ body {
     font-size: 20px;
     border: none;
     cursor: pointer;
-    background-color: #76c7c0; /* Glacier */
+    background-color: #74c7ec; /* Glacier */
     color: white;
     border-radius: 8px;
-    overflow: hidden;
     transition: background 0.3s, transform 0.2s;
 }
 
 /* Hover */
 .game-btn:hover {
-    background-color: #58a399; /* Glacier’in yeşilimsi tonu */
+    background-color: #66b3b3; /* Yeşilimsi Glacier */
     transform: scale(1.05);
 }
 
@@ -44,32 +23,17 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.7);
+    height: 8px;
+    background: #74c7ec; /* Butonun kendi rengi */
     bottom: -8px;
     left: 0;
     border-radius: 5px;
     transform: scaleX(0);
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, background 0.3s;
 }
 
+/* Hover Efekt */
 .game-btn:hover::after {
     transform: scaleX(1);
-}
-
-/* === Tema Butonu === */
-#theme-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 15px;
-    font-size: 35px; /* Daha büyük */
-    cursor: pointer;
-    border: none;
-    background: none;
-    transition: transform 0.2s;
-}
-
-#theme-toggle:hover {
-    transform: scale(1.2);
+    background: #66b3b3; /* Hover renginde parlasın */
 }
